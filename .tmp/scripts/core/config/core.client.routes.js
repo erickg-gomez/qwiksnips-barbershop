@@ -22,14 +22,17 @@ function ($stateProvider, $locationProvider, $urlRouterProvider, helper) {
       // url: '/',
       abstract: true,
       templateUrl: 'modules/core/views/core.client.view.html',
+      controller: 'AppController'
       //resolve: helper.resolveFor('modernizr', 'icons')
-    })
-    .state('app.home', {
-      url: '/home',
-      view:{
-          'menuContent': {
-              templateUrl: 'modules/core/views/home.client.view.html'}
-      }
+  }).
+    state('app.home', {
+        url: '/home',
+        views: {
+            'menuContent': {
+                templateUrl: 'modules/core/views/home.client.view.html',
+
+            }
+        }
     })
     //
     // CUSTOM RESOLVES
